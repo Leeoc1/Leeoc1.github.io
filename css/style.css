@@ -1,132 +1,52 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  background: #222;
-  height: 100%;
+/* 기본 스타일 설정 */
+body,
+html {
   margin: 0;
-}
-li,
-p {
-  line-height: 2;
-  font-size: 0.9em;
-}
-#container {
-  position: absolute;
-  left: 50%;
-  margin-left: -450px;
-  width: 900px;
+  padding: 0;
+  width: 100%;
   height: 100%;
-  background: #fff;
-}
-aside {
-  float: left;
-  width: 300px;
-  padding: 20px 50px;
-  height: 100%;
-  background: rgb(216, 216, 216);
-}
-.pf {
-  border-radius: 10%;
-  box-shadow: 3px 3px 10px 2px #222;
-}
-#detail {
-  position: relative;
-  top: 80px;
-}
-#sns {
-  position: relative;
-  top: 100px;
 }
 
-#main {
-  float: right;
-  width: 600px;
-  height: 100%;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0611ac;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgb(243, 232, 232);
+}
+
+/* 헤더, 메인, 푸터 스타일 */
+.header,
+.main-content,
+.footer {
   padding: 20px;
+  text-align: center;
 }
 
-#main > section {
-  width: 500px;
-  padding: 20px;
-  margin: 10px;
-  border-bottom: 1px dotted #222;
+.header {
+  background-color: #ffffff;
+  color: white;
 }
 
-section > p,
-section > table {
-  margin-left: 50px;
+.main-content {
+  background-color: #ffffff;
+  color: #cfa3a3;
 }
 
-/* 글자스타일 */
-aside h1 {
-  font-size: 1.8em;
-  font-variant: small-caps;
-}
-aside h2 {
-  font-size: 1.2em;
-}
-#namecard p {
-  font-size: 0.9em;
-  color: rgb(99, 99, 99);
-  /* font-style:italic; */
+.footer {
+  background-color: #dbdada;
+  color: white;
 }
 
-.subtitle {
-  font-size: 1.5em;
-  /* padding-left:45px; */
-  line-height: 0.9em;
-}
-.subtitle::before {
-  content: "";
-  display: block;
-  background: url("../images/note.png") no-repeat;
-  width: 24px;
-  height: 24px;
-  float: left;
-  margin: 0 15px 0 0;
-}
-section > p {
-  font-size: 0.9em;
-}
-
-.label {
-  display: inline-block;
-  width: 80px;
-  color: purple;
-  font-weight: bold;
-}
-
-meter {
-  width: 200px;
-  margin-right: 10px;
-}
-table {
-  width: 70%;
-  /* 표의 너비 */
-  border: 1px solid #222;
-  /* 1픽셀짜리 표 테두리 */
-  border-collapse: collapse;
-  /* 중복되는 표와 셀의 테두리를 한 줄로 표시 */
-}
-
-thead {
-  background: #eee;
-  /* 제목 행의 배경 색 */
-}
-
-th,
-td {
-  border: 1px solid #ccc;
-  /* 1픽셀짜리 셀 테두리 */
-  padding: 5px;
-  /* 셀 테두리와 셀 내용 사이의 여백(패딩) */
-  font-size: 0.8em;
-  /* 셀의 글자 크기 */
-}
-a,
-a:visited {
-  color: #222;
-  text-decoration: none;
-  font-weight: bold;
+/* 반응형 디자인 설정 */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
 }
